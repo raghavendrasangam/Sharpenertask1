@@ -19,4 +19,10 @@ titleadd.style.color= 'green';
 
 var titleclass = document.getElementsByClassName('list-group-item');
 // console.log(titleclass);
-titleclass[1].style.backgroundColor = 'lightpink';
+titleclass[2].style.backgroundColor = 'green';
+
+var items = document.getElementsByClassName('list-group-item');
+
+for (var i=0; i < items.length; i++){
+    items[i].style.fontWeight = 'bold';
+}
