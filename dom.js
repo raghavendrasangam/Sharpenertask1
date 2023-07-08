@@ -26,3 +26,9 @@ var items = document.getElementsByClassName('list-group-item');
 for (var i=0; i < items.length; i++){
     items[i].style.fontWeight = 'bold';
 }
+
+//GET ELEMENTS BY TAGNAME
+
+var tagname = document.getElementsByTagName('li');
+ console.log(tagname);
+ tagname[4].style.backgroundColor = 'grey';
