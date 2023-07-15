@@ -32,3 +32,28 @@ for (var i=0; i < items.length; i++){
 var tagname = document.getElementsByTagName('li');
  console.log(tagname);
  tagname[4].style.backgroundColor = 'grey';
+
+ //QUERYSELECTOR
+ //can be used for only oone element
+//  var input = document.querySelector('input');
+//  input.value = 'Hello World';
+
+//  var submit = document.querySelector('input[type="submit"]');
+//  submit.value="SEND";
+
+ var secondItem = document.querySelector('.list-group-item:nth-child(2)');
+ secondItem.style.backgroundColor= 'green';
+
+ var thirdItem = document.querySelector('.list-group-item:nth-child(3)');
+ thirdItem.style.visibility = 'hidden';
+
+ //QUERYSELECTORALL
+
+ var oddgreen = document.querySelectorAll('li');
+oddgreen[1].style.color= 'green';
+
+var odd= document.querySelectorAll('li:nth-child(odd)');
+
+for(var j=0; j < odd.length; j++){
+    odd[j].style.backgroundColor= 'green';
+}
