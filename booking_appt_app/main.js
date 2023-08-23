@@ -40,8 +40,12 @@ function onSubmit(ee) {
     var nameinput = document.getElementById('name').value;
     var emailinput = document.getElementById('email').value;
     
+     var rightformat = {
+        nameinput: nameinput,
+        emailinput: emailinput
+     }
     // console.log(nameinput);
     // console.log(emailinput);
-    localStorage.setItem('Name', nameinput);
-    localStorage.setItem('Email', emailinput);
+    localStorage.setItem('rightformat', JSON.stringify(rightformat) );
+    // localStorage.setItem('Email', emailinput);
 }
