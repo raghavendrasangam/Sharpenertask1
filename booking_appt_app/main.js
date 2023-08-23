@@ -9,16 +9,16 @@
           
 // })
 
-// const myForm = document.querySelector('#my-form');
-// const nameInput = document.querySelector('#name');
-// const emailInput = document.querySelector('#email');
+const myForm = document.querySelector('#my-form');
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
 // const msg = document.querySelector('.msg');
 // const userList = document.querySelector('#users');
 
-// myForm.addEventListener('submit', onSubmit);
+myForm.addEventListener('submit', onSubmit);
 
-// function onSubmit(ee) {
-//     ee.preventDefault();
+function onSubmit(ee) {
+    ee.preventDefault();
 //     if(nameInput.value === '' || emailInput === ''){
 //         msg.classList.add('error');
 //         msg.innerHTML='Please enter all fields ';
@@ -36,5 +36,12 @@
 
 
 //     }
+  
+    var nameinput = document.getElementById('name').value;
+    var emailinput = document.getElementById('email').value;
     
-// }
+    // console.log(nameinput);
+    // console.log(emailinput);
+    localStorage.setItem('Name', nameinput);
+    localStorage.setItem('Email', emailinput);
+}
