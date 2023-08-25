@@ -58,7 +58,19 @@ function showonscreen(obj){
         localStorage.removeItem(obj.emailinput)
         parent.removeChild(childitem)
     }
+
+    const editbutton = document.createElement('input');
+    editbutton.type = "button";
+    editbutton.value = 'Edit';
+
+    editbutton.onclick = () => {
+        localStorage.removeItem(obj.emailinput)
+        parent.removeChild(childitem)
+        document.getElementById('name').value =obj.nameinput;
+        document.getElementById('email').value = obj.emailinput;
+    }
     childitem.appendChild(delebutton)
+    childitem.appendChild(editbutton)
     parent.appendChild(childitem)
 }
 //         const li =document.createElement('li');
