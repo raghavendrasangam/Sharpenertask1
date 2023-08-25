@@ -19,12 +19,7 @@ myForm.addEventListener('submit', onSubmit);
 
 function onSubmit(ee) {
     ee.preventDefault();
-    if(nameInput.value === '' || emailInput === ''){
-        msg.classList.add('error');
-        msg.innerHTML='Please enter all fields ';
-
-        setTimeout(() => msg.remove(), 3000);
-    } else {
+    
         
     var nameinput = document.getElementById('name').value;
     var emailinput = document.getElementById('email').value;
@@ -48,12 +43,22 @@ function onSubmit(ee) {
    
     
 }
-}
+
 
 function showonscreen(obj){
     const parent = document.getElementById('users');
     const childitem = document.createElement('li');
     childitem.textContent =  obj.nameinput +  '--' + obj.emailinput;
+
+    const delebutton = document.createElement('input');
+    delebutton.type = "button";
+    delebutton.value = 'Delete';
+
+    delebutton.onclick = () =>{
+        localStorage.removeItem(obj.emailinput)
+        parent.removeChild(childitem)
+    }
+    childitem.appendChild(delebutton)
     parent.appendChild(childitem)
 }
 //         const li =document.createElement('li');
